@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div ng-show="infoCtrl.signedUp">
+            <h1>USER PROFILE</h1>
+            <h4>First name: <strong>{{infoCtrl.user.firstName}}</strong></h4>
+            <h4>Last name: <strong>{{infoCtrl.user.lastName}}</strong></h4>
+            <h4>Email: <strong>{{infoCtrl.user.email}}</strong></h4>
+            <h4>Phone: <strong>{{infoCtrl.user.phone}}</strong></h4>
+            <h4>Favorite dish:</h4>
+
+            <h4>Dish: <strong>{{infoCtrl.user.favoriteDishDetails.name}}</strong></h4>
+            <h4>Description: <strong>{{infoCtrl.user.favoriteDishDetails.name}}</strong></h4>
+            <img class="img-responsive" width="250" height="150"
+                ng-src="images/menu/{{infoCtrl.user.category}}/{{infoCtrl.user.favoriteDishDetails.short_name}}.jpg"
+                alt="{{infoCtrl.user.favoriteDishDetails.name}}">
+
+        </div>
+
+        <div ng-hide="infoCtrl.signedUp">
+            <h4>You need to signup first. <a ui-sref="public.signup">Signup now!</a></h4>
+        </div>
+    </div>
+</div>
